@@ -1,0 +1,245 @@
+html {
+  font-size: 16px;
+  font-family: 'Audi', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Audi';
+}
+
+form {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 420px;
+}
+
+.text-contact-container {
+  font-family: 'Audi', sans-serif;
+  font-size: 12px;
+  width: 420px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.text-title {
+  font-family: 'Audi-bold', sans-serif;
+  font-weight: bold;
+  color: white;
+  width: 420px;
+  font-size: 22px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.text-title-between {
+  font-family: 'Audi-bold', sans-serif;
+  font-weight: bold;
+  color: white;
+  margin-left: 8px;
+}
+
+input[type=radio] {
+  font-family: 'Audi', sans-serif;
+  margin-right: 5px;
+  margin-left: 10px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+@font-face {
+  font-family: Audi;
+  src: url(/Fonts/auditype-extendedbold.woff) format("woff");
+}
+
+@font-face {
+  font-family: Audi-bold;
+  src: url(/Fonts/auditype-bold.woff) format("woff");
+  font-weight: bold;
+  font-display: swap;
+}
+
+$fonts: (
+    viu: 'Audi',
+    ionic: 'Open Sans'
+);
+
+$colors: (
+    primary: #4c4c4c
+);
+
+@mixin font($val) {
+  font-family: map-get($fonts, $val);
+}
+
+
+.main-container {
+  background-image: url('img/bg_red_audi.jpg');
+  background-repeat: no-repeat;
+  background-size: 250%;
+  padding: 25px;
+  height: auto;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.action-wrapper {
+  height: 24px;
+  position: relative;
+}
+
+.action-button:hover {
+  left: -22px;
+}
+
+.title-wrapper {
+  text-align: left;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+}
+
+.title-wrapper h1 {
+  font-family: 'Audi-bold', sans-serif;
+  font-weight: bold;
+  color: #000;
+  font-size: 24px;
+}
+
+.input-wrapper {
+  height: 100%;
+  display: flex;
+  align-items: center;
+
+}
+
+.year-wrapper{
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.radio-wrapper{
+  font-family: 'Audi', sans-serif;
+  font-size: 12px;
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-start;
+  margin: 10px 0;
+}
+
+fieldset {
+  padding: 0;
+  margin: 0;
+  border: 0;
+
+  & + & {
+    margin-top: 5px;
+  }
+  & > input:not([type=checkbox]):not([type=radio]) {
+    display: inline;
+    background: #e9e9e9;
+    margin: 5px;
+    padding: 8px;
+    width: 185px;
+    border: 1px solid #e9e9e9;
+    border-radius: 25px;
+    transition: border-color .15s ease-in;
+    font-size: 12px;
+    min-width: 100%;
+    box-shadow: 1px 1px 0 0 rgba(0,0,0,0.2);
+
+  }
+}
+
+select,
+textarea {
+  background: #e9e9e9;
+  margin: 5px;
+  padding: 8px;
+  width: 100%;
+  border: 1px solid #e9e9e9;
+  border-radius: 25px;
+  transition: border-color .15s ease-in;
+  font-size: 12px;
+  box-shadow: 1px 1px 0 0 rgba(0,0,0,0.2);
+
+  &:focus {
+    outline: 0;
+    border-color: #622626;
+  }
+}
+
+.form {
+  width: 430px;
+
+  .group {
+    position: relative;
+    width: 100%;
+    margin-bottom: 2rem;
+    }
+  & > input {
+    background: #e9e9e9;
+    margin: 5px;
+    padding: 8px;
+    width: 100%;
+    border: 1px solid #e9e9e9;
+    border-radius: 25px;
+    transition: border-color .15s ease-in;
+    font-size: 12px;
+    box-shadow: 1px 1px 0 0 rgba(0,0,0,0.2);
+    &:focus {
+      outline: 0;
+      border-color: #622626;
+    }
+  }
+}
+
+.button-wrapper {
+  font-family: 'Audi-bold', sans-serif;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  width: 150px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: rgba(0, 0, 0);
+  cursor: pointer;
+  border-radius: 100px;
+  transition-duration: .4s;
+  margin-bottom: 48px;
+  box-shadow: 3px 3px 0 0 rgba(0,0,0,0.2);
+  &:focus:active {
+    background-color: darken(#c93f3f, 8%);
+  }
+
+  &:focus {
+    outline: 0;
+  }
+
+  &:hover {
+    background-color: lighten(#8d0808, 15%);
+  }
+}
